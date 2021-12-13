@@ -1,200 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="myStyles.css" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f14d3685c8.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <div class="container-fluid p-0 pageheader"> <!-- encabezado start-->
-        <div class="row bg-light px-5">
-            <div class="col d-flex justify-content-start align-items-baseline pt-2">
-                <i class="fab fa-instagram pageheader"></i><h1 class="p-2">Instagram</h1></i>
+    <div class="container-fluid p-0 pageheader">
+        <!-- encabezado start-->
+        <div class="row-fluid d-flex bg-light px-5 justify-content-between">
+            <div class="col d-flex justify-content-start align-items-baseline">
+                <i class="fab fa-instagram pageheader"></i>
+                <h1 class="p-2">Instagram</h1></i>
             </div>
-            <div class="d-flex justify-content-start align-items-center">
-                <button type="button" class="btn btn-success p-1" href="#newpost" data-toggle="modal">Create a new post</button>
+            <div class="col d-flex flex-row justify-content-end align-self-center">
+                <button type="button" class="btn btn-success" href="#newpost" data-toggle="modal">Create a new
+                    post</button>
                 <ul class="nav nav-pills">
                     <li class="nav-item dropdown"></li>
-                        <a class="nav-link btn btn-light dropdown-toggle pr-0" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-cog pageheader"></i></a>
+                    <a class="nav-link btn btn-light dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                        aria-haspopup="true" aria-expanded="false"><i class="fas fa-cog pageheader"></i></a>
                     <li class="nav-item dropdown"></li>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Separated link</a>
-                        </div>
-        </div>
-        <div class="modal" id="newpost" tabindex="-1">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <form>
-                            <div class="form-group">
-                                <textarea class="form-control" id="message-text"></textarea>
-                            </div>
-                        </form>
-                        <button type="button" class="btn btn-outline-secondary"><i class="fas fa-camera"></i></button>
-                        <button type="button" class="btn btn-outline-secondary"><i class="fas fa-map-marker-alt"></i></button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Log Out</a>
                     </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-success">Publish</button>
+            </div>
+            <div class="modal" id="newpost" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <textarea class="form-control" id="message-text"></textarea>
+                                </div>
+                            </form>
+                            <button type="button" class="btn btn-outline-secondary modalbtn"><i
+                                    class="fas fa-camera"></i></button>
+                            <button type="button" class="btn btn-outline-secondary modalbtn"><i
+                                    class="fas fa-map-marker-alt"></i></button>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-success">Publish</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    </div><!-- encabezado end-->
+        </div><!-- encabezado end-->
 
-    <div class="container-fluid p-0"> <!-- cuerpo start-->
-        <ul class="nav nav-pills mb-2 justify-content-center" id="pills-tab" role="tablist">
-            <li class="nav-item feedmode">
-                <a class="nav-link active" id="pills-grilla-tab" data-toggle="pill" href="#pills-grilla" role="tab" aria-controls="pills-grilla" aria-selected="true"><i class="fas fa-th"></i></a>
-            </li>
-            <li class="nav-item feedmode">
-                <a class="nav-link" id="pills-cascada-tab" data-toggle="pill" href="#pills-cascada" role="tab" aria-controls="pills-cascada" aria-selected="false"><i class="fas fa-square"></i></a>
-            </li>
-        </ul>
-        <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-grilla" role="tabpanel" aria-labelledby="pills-grilla-tab">
-                <div class="row d-flex flex-nowrap">
-                    <div class="col 4 p-0"><img src="images/post-1.jpg" class="img-fluid"></img></div>
-                    <div class="col 4 p-0"><img src="images/post-2.jpg" class="img-fluid"></img></div>
-                    <div class="col 4 p-0"><img src="images/post-3.jpg" class="img-fluid"></img></div>
+        <div class="container-fluid p-0">
+            <!-- cuerpo start-->
+            <ul class="nav nav-pills my-2 justify-content-center navbtn" id="pills-tab" role="tablist">
+                <li class="nav-item d-flex justify-items-center">
+                    <a class="nav-link active" id="pills-grilla-tab" data-toggle="pill" href="#pills-grilla" role="tab"
+                        aria-controls="pills-grilla" aria-selected="true"><i class="fas fa-th"></i></a>
+                </li>
+                <li class="nav-item d-flex justify-items-center">
+                    <a class="nav-link" id="pills-cascada-tab" data-toggle="pill" href="#pills-cascada" role="tab"
+                        aria-controls="pills-cascada" aria-selected="false"><i class="fas fa-square"></i></a>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-grilla" role="tabpanel"
+                    aria-labelledby="pills-grilla-tab">
+                    <div class="row-fluid d-flex flex-row flex-nowrap gridrow">
+                        <div class="col-4 d-flex p-0 border border-white justify-content-center"><img
+                                src="https://picsum.photos/600/400" class="img-fluid"></img></div>
+                        <div class="col-4 d-flex p-0 border border-white justify-content-center"><img
+                                src="https://picsum.photos/600/900" class="img-fluid"></img></div>
+                        <div class="col-4 d-flex p-0 border border-white justify-content-center"><img
+                                src="https://picsum.photos/800/600" class="img-fluid"></img></div>
+                    </div>
+                    <div class="row-fluid d-flex flex-row flex-nowrap gridrow">
+                        <div class="col-4 d-flex p-0 border border-white justify-content-center"><img
+                                src="https://picsum.photos/400/600" class="img-fluid"></img></div>
+                        <div class="col-4 d-flex p-0 border border-white justify-content-center"><img
+                                src="https://picsum.photos/600/300" class="img-fluid"></img></div>
+                        <div class="col-4 d-flex p-0 border border-white justify-content-center"><img
+                                src="https://picsum.photos/300/200" class="img-fluid"></img></div>
+                    </div>
+                    <div class="row-fluid d-flex flex-row flex-nowrap gridrow">
+                        <div class="col-4 d-flex p-0 border border-white justify-content-center"><img
+                                src="https://picsum.photos/1200/600" class="img-fluid"></img></div>
+                        <div class="col-4 d-flex p-0 border border-white justify-content-center"><img
+                                src="https://picsum.photos/600/650" class="img-fluid"></img></div>
+                        <div class="col-4 d-flex p-0 border border-white justify-content-center"><img
+                                src="https://picsum.photos/1000/1000" class="img-fluid"></img></div>
+                    </div>
                 </div>
-                <div class="row d-flex flex-nowrap">
-                    <div class="col p-0"><img src="images/post-4.jpg" class="img-fluid"></img></div>
-                    <div class="col p-0"><img src="images/post-5.jpg" class="img-fluid"></img></div>
-                    <div class="col p-0"><img src="images/post-6.jpg" class="img-fluid"></img></div>
-                </div>
-                <div class="row d-flex flex-nowrap">
-                    <div class="col p-0"><img src="images/post-7.jpg" class="img-fluid"></img></div>
-                    <div class="col p-0"><img src="images/post-8.jpg" class="img-fluid"></img></div>
-                    <div class="col p-0"><img src="images/post-9.jpg" class="img-fluid"></img></div>
+                <div class="tab-pane fade" id="pills-cascada" role="tabpanel" aria-labelledby="pills-cascada-tab">
+                    <div class="col d-flex flex-column-reverse flex-wrap align-content-center cascadefeed">
+                        <!-- post 1 start-->
+                        <div class="card my-4" style="width: 70%;">
+                            <div class="card-header d-flex px-2 justify-content-between bg-white align-items-baseline">
+                                <h4 class="card-title">My first photo</h4>
+                                <h5 class="card-subtitle text-muted">12/21</h5>
+                            </div>
+                            <div class="card-body-fluid">
+                                <img src="https://picsum.photos/600/400" class="img-fluid"></img>
+                            </div>
+                            <div class="card-footer p-2 bg-white">
+                                <h5 class="card-text"><strong>23 likes</strong></h5>
+                                <p class="lead">This is my first photo of the feed, this is a multi line comment for
+                                    teesting purposes. I am learning to code with #BreatheCode</p>
+                                <div class="row">
+                                    <div class="col-1 p-0 d-flex justify-content-center align-items-center"><i
+                                            class="far fa-heart"></i></div>
+                                    <div class="col-10 p-0 d-flex justify-content-start align-items-center">
+                                        <p class="card-text">Comment...</p>
+                                    </div>
+                                    <div class="col-1 p-0 d-flex justify-content-center align-items-center"><i
+                                            class="fas fa-ellipsis-v"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- post 1 end-->
+                        <!-- post 2 start-->
+                        <div class="card my-4" style="width: 70%;">
+                            <div class="card-header d-flex px-2 justify-content-between bg-white align-items-baseline">
+                                <h4 class="card-title">Another awesome pic</h4>
+                                <h5 class="card-subtitle text-muted">06/20</h5>
+                            </div>
+                            <div class="card-body-fluid">
+                                <img src="https://picsum.photos/600/900" class="img-fluid"></img>
+                            </div>
+                            <div class="card-footer p-2 bg-white">
+                                <h5 class="card-text"><strong>52 likes</strong></h5>
+                                <p class="lead">The title of this photo was generated ramdomly #BreatheCode</p>
+                                <div class="row">
+                                    <div class="col-1 p-0 d-flex justify-content-center align-items-center"><i
+                                            class="far fa-heart"></i></div>
+                                    <div class="col-10 p-0 d-flex justify-content-start align-items-center">
+                                        <p class="card-text">Comment...</p>
+                                    </div>
+                                    <div class="col-1 p-0 d-flex justify-content-center align-items-center"><i
+                                            class="fas fa-ellipsis-v"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- post 2 end-->
+                        <!-- post 3 start-->
+                        <div class="card my-4" style="width: 70%;">
+                            <div class="card-header d-flex px-2 justify-content-between bg-white align-items-baseline">
+                                <h4 class="card-title">Compassion of Culture</h4>
+                                <h5 class="card-subtitle text-muted">01/19</h5>
+                            </div>
+                            <div class="card-body-fluid">
+                                <img src="https://picsum.photos/800/600" class="img-fluid"></img>
+                            </div>
+                            <div class="card-footer p-2 bg-white">
+                                <h5 class="card-text"><strong>46 likes</strong></h5>
+                                <p class="lead">Another pompous description for hipster people</p>
+                                <div class="row">
+                                    <div class="col-1 p-0 d-flex justify-content-center align-items-center"><i
+                                            class="far fa-heart"></i></div>
+                                    <div class="col-10 p-0 d-flex justify-content-start align-items-center">
+                                        <p class="card-text">Comment...</p>
+                                    </div>
+                                    <div class="col-1 p-0 d-flex justify-content-center align-items-center"><i
+                                            class="fas fa-ellipsis-v"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- post 3 end-->
+                        <!-- post 4 start-->
+                        <div class="card my-4" style="width: 70%;">
+                            <div class="card-header d-flex px-2 justify-content-between bg-white align-items-baseline">
+                                <h4 class="card-title">Dynamic Cover</h4>
+                                <h5 class="card-subtitle text-muted">08/18</h5>
+                            </div>
+                            <div class="card-body-fluid">
+                                <img src="https://picsum.photos/400/600" class="img-fluid"></img>
+                            </div>
+                            <div class="card-footer p-2 bg-white">
+                                <h5 class="card-text"><strong>52 likes</strong></h5>
+                                <p class="lead">The title of this photo has no sense at all</p>
+                                <div class="row">
+                                    <div class="col-1 p-0 d-flex justify-content-center align-items-center"><i
+                                            class="far fa-heart"></i></div>
+                                    <div class="col-10 p-0 d-flex justify-content-start align-items-center">
+                                        <p class="card-text">Comment...</p>
+                                    </div>
+                                    <div class="col-1 p-0 d-flex justify-content-center align-items-center"><i
+                                            class="fas fa-ellipsis-v"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- post 4 end-->
+                        <!-- post 5 start-->
+                        <div class="card my-4" style="width: 70%;">
+                            <div class="card-header d-flex px-2 justify-content-between bg-white align-items-baseline">
+                                <h4 class="card-title">Death of Romance</h4>
+                                <h5 class="card-subtitle text-muted">03/17</h5>
+                            </div>
+                            <div class="card-body-fluid">
+                                <img src="https://picsum.photos/600/300" class="img-fluid"></img>
+                            </div>
+                            <div class="card-footer p-2 bg-white">
+                                <h5 class="card-text"><strong>18 likes</strong></h5>
+                                <p class="lead">Explaining the meaning of this photo for dummies.</p>
+                                <div class="row">
+                                    <div class="col-1 p-0 d-flex justify-content-center align-items-center"><i
+                                            class="far fa-heart"></i></div>
+                                    <div class="col-10 p-0 d-flex justify-content-start align-items-center">
+                                        <p class="card-text">Comment...</p>
+                                    </div>
+                                    <div class="col-1 p-0 d-flex justify-content-center align-items-center"><i
+                                            class="fas fa-ellipsis-v"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- post 5 end-->
+                        <!-- post 6 start-->
+                        <div class="card my-4" style="width: 70%;">
+                            <div class="card-header d-flex px-2 justify-content-between bg-white align-items-baseline">
+                                <h4 class="card-title">Divine Decision</h4>
+                                <h5 class="card-subtitle text-muted">09/16</h5>
+                            </div>
+                            <div class="card-body-fluid">
+                                <img src="https://picsum.photos/300/200" class="img-fluid"></img>
+                            </div>
+                            <div class="card-footer p-2 bg-white">
+                                <h5 class="card-text"><strong>52 likes</strong></h5>
+                                <p class="lead">A short description</p>
+                                <div class="row">
+                                    <div class="col-1 p-0 d-flex justify-content-center align-items-center"><i
+                                            class="far fa-heart"></i></div>
+                                    <div class="col-10 p-0 d-flex justify-content-start align-items-center">
+                                        <p class="card-text">Comment...</p>
+                                    </div>
+                                    <div class="col-1 p-0 d-flex justify-content-center align-items-center"><i
+                                            class="fas fa-ellipsis-v"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- post 6 end-->
+                        <!-- post 7 start-->
+                        <div class="card my-4" style="width: 70%;">
+                            <div class="card-header d-flex px-2 justify-content-between bg-white align-items-baseline">
+                                <h4 class="card-title">Ruthless Expression</h4>
+                                <h5 class="card-subtitle text-muted">02/16</h5>
+                            </div>
+                            <div class="card-body-fluid">
+                                <img src="https://picsum.photos/1200/600" class="img-fluid"></img>
+                            </div>
+                            <div class="card-footer p-2 bg-white">
+                                <h5 class="card-text"><strong>6 likes</strong></h5>
+                                <p class="lead">Learning to code with 4Geeks Academy</p>
+                                <div class="row">
+                                    <div class="col-1 p-0 d-flex justify-content-center align-items-center"><i
+                                            class="far fa-heart"></i></div>
+                                    <div class="col-10 p-0 d-flex justify-content-start align-items-center">
+                                        <p class="card-text">Comment...</p>
+                                    </div>
+                                    <div class="col-1 p-0 d-flex justify-content-center align-items-center"><i
+                                            class="fas fa-ellipsis-v"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- post 7 end-->
+                        <!-- post 8 start-->
+                        <div class="card my-4" style="width: 70%;">
+                            <div class="card-header d-flex px-2 justify-content-between bg-white align-items-baseline">
+                                <h4 class="card-title">Miseries of Perseverance</h4>
+                                <h5 class="card-subtitle text-muted">05/15</h5>
+                            </div>
+                            <div class="card-body-fluid">
+                                <img src="https://picsum.photos/600/650" class="img-fluid"></img>
+                            </div>
+                            <div class="card-footer p-2 bg-white">
+                                <h5 class="card-text"><strong>119 likes</strong></h5>
+                                <p class="lead">Some fancy description about the picture above</p>
+                                <div class="row">
+                                    <div class="col-1 p-0 d-flex justify-content-center align-items-center"><i
+                                            class="far fa-heart"></i></div>
+                                    <div class="col-10 p-0 d-flex justify-content-start align-items-center">
+                                        <p class="card-text">Comment...</p>
+                                    </div>
+                                    <div class="col-1 p-0 d-flex justify-content-center align-items-center"><i
+                                            class="fas fa-ellipsis-v"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- post 8 end-->
+                        <!-- post 9 start-->
+                        <div class="card my-4" style="width: 70%;">
+                            <div class="card-header d-flex px-2 justify-content-between bg-white align-items-baseline">
+                                <h4 class="card-title">This post contains a square picture</h4>
+                                <h5 class="card-subtitle text-muted">12/14</h5>
+                            </div>
+                            <div class="card-body-fluid">
+                                <img src="https://picsum.photos/1000/1000" class="img-fluid"></img>
+                            </div>
+                            <div class="card-footer p-2 bg-white">
+                                <h5 class="card-text"><strong>33 likes</strong></h5>
+                                <p class="lead">Old photos used to be square #BreatheCode</p>
+                                <div class="row">
+                                    <div class="col-1 p-0 d-flex justify-content-center align-items-center"><i
+                                            class="far fa-heart"></i></div>
+                                    <div class="col-10 p-0 d-flex justify-content-start align-items-center">
+                                        <p class="card-text">Comment...</p>
+                                    </div>
+                                    <div class="col-1 p-0 d-flex justify-content-center align-items-center"><i
+                                            class="fas fa-ellipsis-v"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- post 9 end-->
+                    </div>
                 </div>
             </div>
-            <div class="tab-pane fade" id="pills-cascada" role="tabpanel" aria-labelledby="pills-cascada-tab">
-                <div class="col d-flex flex-wrap justify-content-center">
-                    <div class="card mb-5" style="width: 70%;"> <!-- post 1 start-->
-                        <div class="card-header d-flex p-1 justify-content-between bg-white align-items-baseline">
-                            <h5 class="card-title">My first photo</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">12/14</h6>
-                        </div>
-                        <div class="card-body-fluid">
-                            <img src="images/post-1.jpg" class="img-fluid"></img>
-                        </div>
-                        <div class="card-footer p-3 bg-white">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div><!-- post 1 end-->
-                    <div class="card mb-5" style="width: 70%;"> <!-- post 2 start-->
-                        <div class="card-header d-flex p-1 justify-content-between bg-white align-items-baseline">
-                            <h5 class="card-title">My first photo</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">12/14</h6>
-                        </div>
-                        <div class="card-body-fluid">
-                            <img src="images/post-2.jpg" class="img-fluid"></img>
-                        </div>
-                        <div class="card-footer p-3 bg-white">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div><!-- post 2 end-->
-                    <div class="card mb-5" style="width: 70%;"> <!-- post 3 start-->
-                        <div class="card-header d-flex p-1 justify-content-between bg-white align-items-baseline">
-                            <h5 class="card-title">My first photo</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">12/14</h6>
-                        </div>
-                        <div class="card-body-fluid">
-                            <img src="images/post-3.jpg" class="img-fluid"></img>
-                        </div>
-                        <div class="card-footer p-3 bg-white">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div><!-- post 3 end-->
-                    <div class="card mb-5" style="width: 70%;"> <!-- post 4 start-->
-                        <div class="card-header d-flex p-1 justify-content-between bg-white align-items-baseline">
-                            <h5 class="card-title">My first photo</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">12/14</h6>
-                        </div>
-                        <div class="card-body-fluid">
-                            <img src="images/post-4.jpg" class="img-fluid"></img>
-                        </div>
-                        <div class="card-footer p-3 bg-white">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div><!-- post 4 end-->
-                    <div class="card mb-5" style="width: 70%;"> <!-- post 5 start-->
-                        <div class="card-header d-flex p-1 justify-content-between bg-white align-items-baseline">
-                            <h5 class="card-title">My first photo</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">12/14</h6>
-                        </div>
-                        <div class="card-body-fluid">
-                            <img src="images/post-5.jpg" class="img-fluid"></img>
-                        </div>
-                        <div class="card-footer p-3 bg-white">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div><!-- post 5 end-->
-                    <div class="card mb-5" style="width: 70%;"> <!-- post 6 start-->
-                        <div class="card-header d-flex p-1 justify-content-between bg-white align-items-baseline">
-                            <h5 class="card-title">My first photo</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">12/14</h6>
-                        </div>
-                        <div class="card-body-fluid">
-                            <img src="images/post-6.jpg" class="img-fluid"></img>
-                        </div>
-                        <div class="card-footer p-3 bg-white">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div><!-- post 6 end-->
-                    <div class="card mb-5" style="width: 70%;"> <!-- post 7 start-->
-                        <div class="card-header d-flex p-1 justify-content-between bg-white align-items-baseline">
-                            <h5 class="card-title">My first photo</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">12/14</h6>
-                        </div>
-                        <div class="card-body-fluid">
-                            <img src="images/post-7.jpg" class="img-fluid"></img>
-                        </div>
-                        <div class="card-footer p-3 bg-white">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div><!-- post 7 end-->
-                    <div class="card mb-5" style="width: 70%;"> <!-- post 8 start-->
-                        <div class="card-header d-flex p-1 justify-content-between bg-white align-items-baseline">
-                            <h5 class="card-title">My first photo</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">12/14</h6>
-                        </div>
-                        <div class="card-body-fluid">
-                            <img src="images/post-8.jpg" class="img-fluid"></img>
-                        </div>
-                        <div class="card-footer p-3 bg-white">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div><!-- post 8 end-->
-                    <div class="card mb-5" style="width: 70%;"> <!-- post 9 start-->
-                        <div class="card-header d-flex p-1 justify-content-between bg-white align-items-baseline">
-                            <h5 class="card-title">My first photo</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">12/14</h6>
-                        </div>
-                        <div class="card-body-fluid">
-                            <img src="images/post-9.jpg" class="img-fluid"></img>
-                        </div>
-                        <div class="card-footer p-3 bg-white">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div><!-- post 9 end-->
-                </div>
-            </div>
-        </div>
-    </div> <!-- cuerpo end-->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+        </div> <!-- cuerpo end-->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+            integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+            crossorigin="anonymous"></script>
 </body>
+
 </html>

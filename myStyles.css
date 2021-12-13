@@ -1,42 +1,14 @@
-/** {
-    border: 1px dashed red;
-}*/
-
-h1 {
-    color: #78777C;
-}
-
 h1 {
     font-family: 'Grand Hotel', cursive;
+    color: #78777C;
 }
 
 i.fa-instagram {
     font-size: 35px;
 }
 
-i.fa-cog {
-    font-size: 20px;
-}
-
-.fa-th {
-    font-size: 20px;
-}
-
-.fa-square {
-    font-size: 15px;
-}
-
-/*.nav-item  #78777C
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    color: #fff;
-    background-color: #78777C;
-}
-
-*/
-
-.feedmode {
-    width: 50px;
-    height: 50px;
+i.fa-cog, .fa-th, .fa-square, .fa-map-marker-alt, .fa-camera, .fa-heart , .fa-ellipsis-v{
+    font-size: 1rem;
 }
 
 .pageheader {
@@ -45,4 +17,27 @@ i.fa-cog {
 
 .card-body-fluid > img {
     width: 100%;
+    object-fit: contain;
+}
+
+.cascadefeed {
+    background: #e2e2e2;
+}   
+
+.gridrow {
+    height: 300px;
+}
+
+.modalbtn {
+    width: 40px;
+    padding: 4px 0px 4px 0px;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #777778;
+}
+
+a, a:hover {
+    color: #777778;
 }
